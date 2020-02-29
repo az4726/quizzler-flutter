@@ -2,7 +2,7 @@
 
 ## About Project
 
-Following a tutorial from [The London App Brewery](https://www.appbrewery.co/), I have built on a Dart skeleton project and have syccesfully created a quiz app.
+Following a tutorial from [The London App Brewery](https://www.appbrewery.co/), I have built on a Dart skeleton project and have succesfully created a quiz app.
 
 ![Finished App](https://github.com/londonappbrewery/Images/blob/master/quizzler-demo.gif)
 
