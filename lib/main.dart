@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'quizBrain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 QuizBrain quizBrain = new QuizBrain();
 
@@ -11,7 +12,7 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Colors.blueGrey.shade900,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -43,7 +44,9 @@ class _QuizPageState extends State<QuizPage> {
             DialogButton(
               child: Text(
                 "OK",
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: GoogleFonts.quicksand(
+                  textStyle: TextStyle(color: Colors.white, fontSize: 20),
+                ),
               ),
               onPressed: () => Navigator.pop(context),
               width: 120,
@@ -57,13 +60,13 @@ class _QuizPageState extends State<QuizPage> {
           print('$selectedAnswer - Correct answer');
           scoreKeeper.add(Icon(
             Icons.check,
-            color: Colors.green,
+            color: Colors.green.shade600,
           ));
         } else {
           print('$selectedAnswer - Wrong answer');
           scoreKeeper.add(Icon(
             Icons.close,
-            color: Colors.red,
+            color: Colors.red.shade600,
           ));
         }
         quizBrain.nextQuestion();
@@ -85,9 +88,11 @@ class _QuizPageState extends State<QuizPage> {
               child: Text(
                 quizBrain.getQuestionText(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.white,
+                style: GoogleFonts.quicksand(
+                  textStyle: TextStyle(
+                    fontSize: 25.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -98,12 +103,14 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
               textColor: Colors.white,
-              color: Colors.green,
+              color: Colors.green.shade600,
               child: Text(
                 'True',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
+                style: GoogleFonts.quicksand(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
                 ),
               ),
               onPressed: () {
@@ -117,12 +124,14 @@ class _QuizPageState extends State<QuizPage> {
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
-              color: Colors.red,
+              color: Colors.red.shade600,
               child: Text(
                 'False',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
+                style: GoogleFonts.quicksand(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
                 ),
               ),
               onPressed: () {
